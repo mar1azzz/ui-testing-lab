@@ -1,0 +1,28 @@
+{
+  "name": "lab2_ui_testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "test": "npx playwright test",
+  "test:headed": "npx playwright test --headed",
+  "test:runThis": "npx playwright test --grep @runThis"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/zatsepina.maria/ui-testing-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/zatsepina.maria/ui-testing-lab/issues"
+  },
+  "homepage": "https://gitlab.com/zatsepina.maria/ui-testing-lab#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.1.0"
+  }
+}
