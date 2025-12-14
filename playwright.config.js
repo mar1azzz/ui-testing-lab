@@ -2,10 +2,12 @@ const { defineConfig } = require("@playwright/test");
 
 const width = Number(process.env.VIEWPORT_WIDTH) || 1920;
 const height = Number(process.env.VIEWPORT_HEIGHT) || 1080;
+const workers = process.env.WORKERS ? Number(process.env.WORKERS) : undefined;
 
 module.exports = defineConfig({
   testDir: "./tests",
   timeout: 30 * 1000,
+  workers,
 
   reporter: [
     ["html", { open: "never" }],

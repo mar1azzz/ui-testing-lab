@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 const PracticeFormPage = require("../src/pages/PracticeFormPage");
 const { createPracticeFormData } = require("../src/data/factories/formFactory");
 
-test.describe("Practice Form", () => {
+test.describe.parallel("Practice Form", () => {
   let formPage;
 
   test.beforeEach(async ({ page }) => {
@@ -10,7 +10,7 @@ test.describe("Practice Form", () => {
     await formPage.open();
   });
 
-  test("should submit form with valid data", async ({ page }) => {
+  test("should submit form with valid data", async () => {
     const data = createPracticeFormData();
 
     await formPage.fillForm(data);
@@ -29,7 +29,6 @@ test.describe("Practice Form", () => {
 
   test("should not submit form with empty required fields", async () => {
     await formPage.submit();
-
     await expect(formPage.modal).not.toBeVisible();
   });
 });

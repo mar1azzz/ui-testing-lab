@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 const SelectMenuPage = require("../src/pages/SelectMenuPage");
 const { SELECT_MENU } = require("../src/data/constants");
 
-test.describe("Select Menu", () => {
+test.describe.parallel("Select Menu", () => {
   let pageObj;
 
   test.beforeEach(async ({ page }) => {
@@ -10,7 +10,7 @@ test.describe("Select Menu", () => {
     await pageObj.open();
   });
 
-  test("should select all dropdown values", async () => {
+  test("@runThis should select all dropdown values", async () => {
     await pageObj.selectReactOptionByInput(
       pageObj.selectValueInput,
       SELECT_MENU.SELECT_VALUE
@@ -39,7 +39,6 @@ test.describe("Select Menu", () => {
     const chips = pageObj.page.locator(".css-12jo7m5");
     await expect(chips).toHaveCount(2);
 
-    // clear by backspace
     await pageObj.multiSelectInput.click({ force: true });
     await pageObj.page.keyboard.press("Backspace");
     await pageObj.page.keyboard.press("Backspace");

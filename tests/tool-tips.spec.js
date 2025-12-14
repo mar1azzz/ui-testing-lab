@@ -1,7 +1,7 @@
 const { test, expect } = require("@playwright/test");
 const ToolTipsPage = require("../src/pages/ToolTipsPage");
 
-test.describe("Tool Tips", () => {
+test.describe.parallel("Tool Tips", () => {
   let pageObj;
 
   test.beforeEach(async ({ page }) => {
