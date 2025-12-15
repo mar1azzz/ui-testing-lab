@@ -1,6 +1,11 @@
 # DemoQA UI Automation (Playwright)
 
 UI test automation project for https://demoqa.com using Playwright and Page Object Model.
+## Local tests run report
+<img width="1911" height="970" alt="ui report" src="https://github.com/user-attachments/assets/a694a1e2-354f-4908-833c-fc0c215dc72f" />
+
+<img width="1171" height="892" alt="junit report" src="https://github.com/user-attachments/assets/59f04032-fb5a-4f95-9903-245afe03f12e" />
+
 
 ---
 
