@@ -37,7 +37,7 @@ jobs:
         env:
           VIEWPORT_WIDTH: ${{ matrix.viewport.width }}
           VIEWPORT_HEIGHT: ${{ matrix.viewport.height }}
-          WORKERS: 4
+          WORKERS: 2
         run: |
           npx playwright test --project=${{ matrix.browser }}
 
